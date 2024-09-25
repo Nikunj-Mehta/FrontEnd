@@ -1,0 +1,47 @@
+.Heading
+    {
+        color: black;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .Secline
+    {
+        color: rgb(46, 164, 79);
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .thirdline
+    {
+        color: black;
+        font-size: 17px;
+    }
+
+    .cart
+    {
+        background-color: rgb(255, 216, 20);
+        border: none;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        height: 40px;
+        width: 150px;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .buy
+    {
+        background-color: rgb(2550, 165, 0);
+        border: none;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        height: 40px;
+        width: 150px;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-right: 10px;
+    }

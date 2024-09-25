@@ -1,5 +1,4 @@
-<style>
-    .back, .next
+.back, .next
     {
         padding-top: 8px;
         padding-bottom: 8px;
@@ -84,18 +83,3 @@
         margin-left: 0px;
         margin-right: 0px;
     }
-</style>
-<button class = "back">Back</button>
-<p class = "page"> <u>1</u> <u>2</u> <u>3</u> <u>4</u> <u>5</u></p>
-<button class = "next">Next</button>
-<br>
-<br>
-<button class = "stretch">Stretch</button>
-<br>
-<br>
-<button class = "shadow">Shadow</button>
-<br>
-<br>
-<button class = "oneName">One</button>
-<button class = "oneName">Two</button>
-<button class = "oneName">Three</button>

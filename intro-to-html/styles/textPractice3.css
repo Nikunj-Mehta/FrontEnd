@@ -1,5 +1,4 @@
-<style>
-    p
+p
     {
         margin-top: 4px;
         margin-bottom: 0px;
@@ -58,29 +57,3 @@
         font-size: 14px;
         cursor: pointer;
     }
-</style>
-
-<p class = "number">
-    1,049.61 <span class = "usd"> USD</span>
-</p>
-
-<p class = "price-hype">
-    +18.05(1.75%) today
-</p>
-
-<p class = "after-hours">
-    After hours 1,048.00 <span class = "dec-percent">-1.61 (0.15%)</span>
-</p>
-
-<br>
-<br>
-
-<p class = "fcc">
-    <strong>freeCodeCamp.org</strong> <span class = "time">@freeCodeCamp 1h</span>
-</p>
-<p class = "info">
-    As a web developer, you'll want to make your projects easy to use and navigate around.
-</p>
-<p class = "link">
-    Here <span class = "special">@chp_it</span> outlines the top skills new developers should have.
-</p>

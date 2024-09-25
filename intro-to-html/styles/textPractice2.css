@@ -1,5 +1,4 @@
-<style>
-    p
+p
     {
         font-family: Arial;
         text-align: center;
@@ -49,18 +48,3 @@
         border-radius: 9px;
         cursor: pointer;
     }
-</style>
-
-<p class = "new">
-    New
-</p>
-<p class = "macbook">
-    MacBook Pro
-</p>
-<p class = "charges">
-    Supercharged for pros.
-</p>
-<p class = "price">
-    from $1999
-</p>
-<button class = "buy">Buy</button>
