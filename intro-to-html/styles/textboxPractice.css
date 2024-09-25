@@ -1,0 +1,104 @@
+.search-bar
+{
+    font-size: 16px;
+    border-width: 1px;
+    border-style: solid;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 8px;
+    border-color: rgb(200, 200, 200);
+}
+
+.google-search-bar
+{
+    font-size: 16px;
+    width: 500px;
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 30px;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p
+{
+    font-family: Arial;
+    color: rgb(100, 100, 100);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.email
+{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.text-box
+{
+    font-size:16px;
+    width: 400px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(100, 100, 100);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.disclamer
+{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.join-button
+{
+    background-color: rgb(10, 102, 194);
+    border: none;
+    color: white;
+    font-size: 20px;
+    width: 400px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 30px;
+}
+
+.dog-image
+{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 25px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.about
+{
+    font-size: 18px;
+    border: none;
+    width: 250px;
+    vertical-align: middle;
+}
+.tweet
+{
+    background-color: rgb(29, 155, 240);
+    color: white;
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    vertical-align: middle;
+}
