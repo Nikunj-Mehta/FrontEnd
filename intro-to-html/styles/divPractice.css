@@ -1,0 +1,190 @@
+.red-square
+{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.green-circle
+{
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    display: inline-block;
+}
+
+.service
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.youtube-music
+{
+    width: 300px;
+    background-color: black;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+}
+
+.heading
+{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description
+{
+    font-size: 15px;
+    color: rgb(160, 160, 160);
+}
+
+.dog-image
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-left: 15px;
+}
+
+.dog-image, .what, .tweet
+{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+.what
+{
+    font-family: Arial;
+    color: rgb(96, 96, 96);
+    font-size: 20px;
+}
+
+.tweet-card
+{
+    width: 500px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 6px;
+}
+
+.tweet
+{
+    background-color: rgb(29, 155, 240);
+    color: white;
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 14px;
+    padding-right: 14px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 100px;
+}
+
+.dog-card
+{
+    width: 200px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    font-family: Arial;
+}
+
+
+.dog
+{
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.name, .mutuals, .friends
+{
+    padding-left: 4px;
+    font-family: Arial;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 3px;
+    margin-bottom: 0px;
+    margin-left: 4px;
+}
+
+.name
+{
+    font-weight: bold;
+}
+
+.mutuals
+{
+    color:rgb(100, 100, 100);
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 0px;
+}
+
+.friends
+{
+    background-color: rgb(24, 119, 242);
+    color: white;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.dog-profile
+{
+    width: 1px;
+    height: 1px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.profile-pic
+{
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    align-items: center;
+}
+
+.dp
+{
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;  
+}
+
+.friends-info
+{
+    align-items: center;
+}
+
+.dog-template
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+}
