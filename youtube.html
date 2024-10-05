@@ -5,11 +5,37 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="youtube.css">
+        
+        <link rel="stylesheet" href="youtubeStyles/general.css">
+        <link rel="stylesheet" href="youtubeStyles/header.css">
+        <link rel="stylesheet" href="youtubeStyles/video.css">
+        <link rel="stylesheet" href="youtubeStyles/sidebar.css"
     </head>
     <body>
-        <input class = "search-bar" type = "text" placeholder = "Search">
-        
+        <div class="header">
+            <div class="left-section">
+                <img class="hamburger-menu" src="youtube-icons/hamburger-menu.svg">
+                <img class="youtube-logo" src="youtube-icons/youtube-logo.svg">
+            </div>
+            <div class="middle-section">
+                <input class = "search-bar" type = "text" placeholder = "Search">
+                <button class="search-button" >
+                    <img class="search-icon" src="youtube-icons/search.svg">
+                </button>
+                <button class="voice-search-button">
+                    <img class="voice-search-icon" src="youtube-icons/voice-search-icon.svg"
+                </button>
+            </div>
+            <div class="right-section">
+                <img class="upload-icon" src="youtube-icons/upload.svg">
+                <img class="youtube-apps-icon" src="youtube-icons/youtube-apps.svg">
+                <img class="notification-icon" src="youtube-icons/notifications.svg">
+                <img class="current-user-picture" src="channel-pictures/NikunjMehtaPhoto.JPG">
+            </div>
+        </div>
+
+        <div class="sidebar">Sidebar</div>
+
         <div class="video-grid">
             <div class = "video-preview">
 
