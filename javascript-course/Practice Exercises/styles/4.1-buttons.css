@@ -1,0 +1,13 @@
+.add-to-cart-button
+{
+  background-color: yellow;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.buy-now-button
+{
+  background-color: orange;
+  border-width: 2px;
+  border-style: solid;
+}
