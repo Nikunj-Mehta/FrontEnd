@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 9.1</title>
+  </head>
+  <body>
+    <button>9a</button>
+    <button class="js-9b-button">9b</button>
+    
+    <br>
+
+    <button onclick="
+      display('Heads')  
+    ">Heads</button>
+
+    <button onclick="
+      display('Tails')
+    ">Tails</button>
+
+    <p class="js-your-choice"></p>
+
+    <script>
+      console.log(document.querySelector('button'));
+
+      document.querySelector('.js-9b-button').innerHTML = '9b done!';
+
+      function display(choice)
+      {
+        if(choice === 'Heads')
+        {
+          document.querySelector('.js-your-choice').innerHTML = 'You chose: Heads';
+        }
+        else
+        {
+          document.querySelector('.js-your-choice').innerHTML = 'You chose: Tails';
+        }
+      }
+    </script>
+  </body>
+</html>

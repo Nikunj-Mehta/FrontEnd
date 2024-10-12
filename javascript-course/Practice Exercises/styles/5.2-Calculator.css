@@ -6,6 +6,8 @@ body
 p
 {
   display: flex;
+  color: white;
+  font-size: 30px;
   flex-direction: row;
 }
 

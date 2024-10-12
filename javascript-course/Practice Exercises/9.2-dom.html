@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercise 9.1</title>
+  </head>
+  <body>
+    <input placeholder="Name" class="js-input-name" onkeydown="
+      handelKeydown();  
+    ">
+    <button onclick="
+      display();
+    " class="js-submit-button">Submit</button>
+    <p class="js-display-name"></p>
+    <script>
+
+      function handelKeydown()
+      {
+        if(event.key === 'Enter') display();
+      }
+
+      function display()
+      {
+        const name = document.querySelector('.js-input-name').value;
+
+        document.querySelector('.js-display-name')
+          .innerHTML = `Your name is: ${name}`; 
+      }
+    </script>
+  </body>
+</html>
