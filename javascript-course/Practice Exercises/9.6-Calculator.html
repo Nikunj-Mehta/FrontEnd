@@ -65,7 +65,7 @@
 
       <button  onclick="
         calculation = eval(calculation);
-        document.querySelector('.js-display-calculation').innerHTML = calculation;
+        displayCalculation();
       ">=</button>
 
       <button class="sign" onclick="
@@ -76,19 +76,11 @@
     <p>
       <button class="clear-button" onclick="
         calculation = '';
-        document.querySelector('.js-display-calculation').innerHTML = calculation;
+        displayCalculation();
+        localStorage.setItem('calculation', calculation); 
       ">Clear</button>
     </p>
 
-    <script>
-      let calculation = localStorage.getItem('calculation') || '';
-      
-      function updateCalculation(value)
-      {
-        calculation += value;
-        localStorage.setItem('calculation', calculation);
-        document.querySelector('.js-display-calculation').innerHTML = calculation;
-      }
-    </script>
+    <script src="scripts/9.6-Calculator.js"></script>
   </body>
 </html>

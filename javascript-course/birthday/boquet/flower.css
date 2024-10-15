@@ -1,0 +1,110 @@
+/* Global styles */
+body {
+  background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #ff5c5c;
+  color: white;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e04848;
+}
+
+/* Container styling */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Bouquet styling */
+.bouquet {
+  position: relative;
+  width: 200px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 30px;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+/* Stems */
+.stem {
+  position: absolute;
+  bottom: 0;
+  width: 5px;
+  height: 150px;
+  background-color: green;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+}
+
+/* Leaves */
+.leaf {
+  position: absolute;
+  width: 20px;
+  height: 40px;
+  background-color: green;
+  border-radius: 50%;
+  left: 30%;
+  bottom: 60px;
+  transform: rotate(-30deg);
+}
+
+.leaf-right {
+  left: 70%;
+  transform: rotate(30deg);
+}
+
+/* Flowers */
+.flower {
+  position: absolute;
+  background-color: #ff5c5c;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flower1 {
+  top: 50px;
+  left: 30%;
+  background-color: #ff9a9e;
+}
+
+.flower2 {
+  top: 20px;
+  left: 50%;
+  background-color: #ffd700;
+}
+
+.flower3 {
+  top: 50px;
+  left: 70%;
+  background-color: #ff5c5c;
+}
+
+/* Show bouquet on click */
+.show {
+  transform: scale(1);
+  opacity: 1;
+}

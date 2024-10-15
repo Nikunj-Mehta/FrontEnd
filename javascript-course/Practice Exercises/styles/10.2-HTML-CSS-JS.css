@@ -1,0 +1,16 @@
+.gaming-button, .music-button, .tech-button
+{
+  background-color: rgb(232, 232, 232);
+  color: black;
+  height: 30px;
+  width: 60px;
+  border: none;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.on
+{
+  background-color: black;
+  color: white;
+}
