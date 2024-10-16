@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      const nums = [10, 20, 30];
+      console.log(nums);
+      nums[nums.length-1] = 99;
+      console.log(nums);
+
+      getLastValue(nums);
+      getLastValue([1, 20, 22, 24, 5]);
+      getLastValue(['hi', 'hello', 'good']);
+
+      arraySwap(nums);
+      arraySwap([1, 20, 22, 24, 5]);
+      arraySwap(['hi', 'hello', 'good']);
+
+      function getLastValue(array)
+      {
+        const lastValue = array[array.length - 1];
+        console.log(lastValue);
+      }
+
+      function arraySwap(array)
+      {
+        console.log(array);
+        const temp = array[0];
+        array[0] = array[array.length - 1];
+        array[array.length - 1] = temp;
+        console.log(array);
+      }
+
+      for(let i = 0; i <= 10; i+=2)
+      {
+        console.log(i);
+      }
+
+      for(let i = 5; i >= 0; i--)
+      {
+        console.log(i);
+      }
+
+      let idx = 0;
+
+      while(idx <= 10)
+      {
+        console.log(idx);
+        idx += 2;
+      }
+
+      let index = 5;
+      while(index >= 0)
+      {
+        console.log(index);
+        index--;
+      }
+    </script>
+  </body>
+</html>
