@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      function fizzBuzz()
+      {
+        for(let i = 1; i <= 20; i++)
+        {
+          let num = i;
+          if(num % 3 === 0 && num % 5 === 0) console.log('FizzBuzz');
+          else if(num % 3 === 0) console.log('Fizz');
+          else if(num % 5 === 0) console.log('Buzz');
+          else console.log(num);
+        }
+      }
+
+      fizzBuzz();
+    </script>
+  </body>
+</html>

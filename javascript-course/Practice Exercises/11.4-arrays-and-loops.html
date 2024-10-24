@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      function findIndex(arr, word)
+      {
+        for(let i = 0; i < arr.length; i++)
+        {
+          if(arr[i] === word) return i;
+        }
+        return -1;
+      }
+
+      let index = findIndex(['hello', 'world', 'search', 'good'], 'search');
+      console.log(index);
+
+      index = findIndex(['not', 'found'], 'search');
+      console.log(index);
+
+      console.log(findIndex(['green', 'red', 'blue', 'red'], 'red'));
+      console.log(findIndex(['green', 'red', 'blue', 'red'], 'yellow'));
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      function findIndex(arr, word)
+      {
+        for(let i = 0; i < arr.length; i++)
+        {
+          if(arr[i] === word) return i;
+        }
+        return -1;
+      }
+      
+      function unique(arr)
+      {
+        let result = [];
+        for(let i = 0; i < arr.length; i++)
+        {
+          if(findIndex(result, arr[i]) === -1) result.push(arr[i]);
+        }
+        return result;
+      }
+
+      console.log(unique(['green', 'red', 'blue', 'red']));
+      console.log(unique(['red', 'green', 'green', 'red']));
+
+    </script>
+  </body>
+</html>

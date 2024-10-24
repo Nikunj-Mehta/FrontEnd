@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      function removeEgg(food)
+      {
+        let revFood = food.slice();
+        revFood.reverse();
+        const result = [];
+        let eggsRemoved = 0;
+        for(let i = 0; i < food.length; i++)
+        {
+          if(revFood[i] === 'egg' && eggsRemoved < 2)
+          {
+            eggsRemoved++;
+            continue;
+          }
+          else result.push(revFood[i]);
+        }
+        return result.reverse();
+      }
+
+      const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+      console.log(removeEgg(foods));
+      console.log(foods);
+    </script>
+  </body>
+</html>
