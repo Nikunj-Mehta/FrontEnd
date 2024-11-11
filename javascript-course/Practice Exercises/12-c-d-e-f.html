@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practicing Advanced functions</title>
+  </head>
+  <body>
+    <button class="js-start-button" onclick="updateButton();">Start</button>
+    <br>
+    <br>
+    <button class="js-add-to-cart-button" onclick="displayMessage()">Add to cart</button>
+    <p class="js-message"></p>
+    <script>
+      function updateButton()
+      {
+        const button = document.querySelector('.js-start-button');
+
+        button.innerHTML = 'Loading...';
+
+        setTimeout(function() {
+          button.innerHTML = 'Finished!'
+        }, 1000);
+      }
+      
+      let timeoutId;
+
+      function displayMessage()
+      {
+        const text = document.querySelector('.js-message');
+        text.innerHTML = 'Added';
+
+        // First, cancel the previous timeout so that
+        // it doesn't remove the message too quickly.
+        clearTimeout(timeoutId);
+
+        timeoutId = setTimeout(function() {
+          text.innerHTML = '';
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
