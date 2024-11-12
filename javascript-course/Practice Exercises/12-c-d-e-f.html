@@ -4,24 +4,33 @@
     <title>Practicing Advanced functions</title>
   </head>
   <body>
-    <button class="js-start-button" onclick="updateButton();">Start</button>
+    <button class="js-start-button">Start</button>
     <br>
     <br>
-    <button class="js-add-to-cart-button" onclick="displayMessage()">Add to cart</button>
+    <button class="js-add-to-cart-button">Add to cart</button>
     <p class="js-message"></p>
     <script>
+
+      document.querySelector('.js-start-button').addEventListener('click', () => {
+        updateButton();
+      });
       function updateButton()
       {
         const button = document.querySelector('.js-start-button');
 
         button.innerHTML = 'Loading...';
 
-        setTimeout(function() {
+        setTimeout(() => {
           button.innerHTML = 'Finished!'
         }, 1000);
       }
       
       let timeoutId;
+
+
+      document.querySelector('.js-add-to-cart-button').addEventListener('click', () => {
+        displayMessage();
+      })
 
       function displayMessage()
       {
@@ -32,7 +41,7 @@
         // it doesn't remove the message too quickly.
         clearTimeout(timeoutId);
 
-        timeoutId = setTimeout(function() {
+        timeoutId = setTimeout(() => {
           text.innerHTML = '';
         }, 2000);
       }

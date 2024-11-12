@@ -4,7 +4,26 @@
     <title>Arrays and Loops</title>
   </head>
   <body>
+
+    <button class="js-button">Click</button>
+
     <script>
+
+      /*
+      const buttonElement = document.querySelector('.js-button');
+
+      const eventListener = () => {
+        console.log('clicked'); 
+      };
+      buttonElement.addEventListener('click', eventListener);
+
+      buttonElement.removeEventListener('click', eventListener);
+
+      buttonElement.addEventListener('click', () => {
+        console.log('clicked2');
+      });
+      */
+
       /*
       function greeting()
       {
@@ -57,17 +76,58 @@
       console.log('next line2');
       */
 
+      /*
       [
         'make dinner',
         'wash dishes',
         'watch youtube'
-      ].forEach(function(value, index) {
+      ].forEach((value, index) => {
 
         if(value == 'wash dishes') {
           return;
         }
         console.log(`${index} : ${value}`);
       });
+
+      const arrowFunction = (param) => {
+        console.log(`${param}`)
+      };
+
+      arrowFunction('hello');
+
+      const oneParam = param => {
+        console.log(param + 1);
+      };
+
+      oneParam(2);
+
+      const oneLine = () => 2 + 3;
+
+      console.log(oneLine());
+
+      const object2 = {
+        method: () => {  // arrow mehtod
+
+        },
+        method() {    // short hand method syntax
+
+        }
+      }
+      */
+
+      console.log([1, -3, 5].filter((value, index) => {
+        /*
+        if(value >= 0) return true;
+        else return false;
+        */
+        return value >= 0;
+      }));
+
+      console.log([1, 1, 3].map((value, index) => {
+        return value + 1;
+      }));
+
+      console.log([1, 1, 3].map(value => value + 1));
     </script>
   </body>
 </html>
