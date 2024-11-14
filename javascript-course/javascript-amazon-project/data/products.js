@@ -656,5 +656,47 @@ const products = [
       "apparel",
       "mens"
     ]
+  },
+  {
+    id: "id1",
+    image: "images/products/backpack.jpg",
+    name: "Skybags Casual Backpack 28L - USB Charging Port",
+    rating: {
+      stars: 4.5,
+      count: 583
+    },
+    priceCents: 1800,
+    keywords: [
+      "school",
+      "apparel"
+    ]
+  },
+  {
+    id: "id2",
+    image: "images/products/umbrella.jpg",
+    name: "Umbrella Automatic Open Travel Umbrella with Wind Vent",
+    rating: {
+      stars: 4,
+      count: 833
+    },
+    priceCents: 1600,
+    keywords: [
+      "apparel",
+      "outdoors"
+    ]
+  },
+  {
+    id: "id3",
+    image: "images/products/women-chunky-beanie-gray.webp",
+    name: "Women's Chunky Cable Beanie - Gray",
+    rating: {
+      stars: 3.5,
+      count: 422
+    },
+    priceCents: 1300,
+    keywords: [
+      "apparel",
+      "womens"
+    ]
   }
 ];
