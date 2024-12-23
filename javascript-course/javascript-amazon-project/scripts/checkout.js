@@ -1,6 +1,6 @@
 import {cart, removeFromCart} from '../data/cart.js';
 import {products} from '../data/products.js';
-import {formatCurrency} from './utils/money.js';
+import {formatCurrency} from './utils/money.js'; 
 
 let cartSummaryHTML = '';
 
@@ -19,7 +19,7 @@ cart.forEach((cartItem) => {
 //  console.log(matchingProduct);
 
 cartSummaryHTML += ` 
-  <div class="cart-item-container">
+  <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
     <div class="delivery-date">
       Delivery date: Tuesday, June 21
     </div>
@@ -107,6 +107,11 @@ document.querySelectorAll('.js-delete-link').forEach((link) => {
 //      console.log(productId);
       removeFromCart(productId);
 //      console.log(cart);
+
+      const container = document.querySelector(`.js-cart-item-container-${productId}`);
+//    console.log(container);  
+      // step 2: Use .remove() method to remove the element form cart
+      container.remove();
   });
 });
 
