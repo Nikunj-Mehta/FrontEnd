@@ -1,9 +1,9 @@
 import {cart, removeFromCart, calculateCartQuantity, updateQuantity, updateDeliveryOption} from '../../data/cart.js';
 import {products, getProduct} from '../../data/products.js';
 import {formatCurrency} from '../utils/money.js'; // removed {} because we used Default Export.
-import {hello} from 'https://unpkg.com/supersimpledev@1.0.1/hello.esm.js';
+// import {hello} from 'https://unpkg.com/supersimpledev@1.0.1/hello.esm.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
-import {deliveryOptions, getDeliveryOption} from '../../data/deliveryOptions.js';
+import {deliveryOptions, getDeliveryOption, calculateDeliveryDate} from '../../data/deliveryOptions.js';
 import { renderPaymentSummary } from './paymentSummary.js';
 
 // hello();
@@ -28,14 +28,7 @@ export function renderOrderSummary() {
 
     const deliveryOption = getDeliveryOption(deliveryOptionId); // in deliveryOptions.js
 
-    const today = dayjs();
-    const deliveryDate = today.add(
-      deliveryOption.deliveryDays,
-      'days'
-    );
-    const dateString = deliveryDate.format(
-      'dddd, MMMM D'
-    );
+    const dateString = calculateDeliveryDate(deliveryOption);
 
     cartSummaryHTML += `
       <div class="cart-item-container js-cart-item-container-${matchingProduct.id}">
@@ -88,14 +81,8 @@ export function renderOrderSummary() {
     let html = '';
     // Step 1: Loop through deliveryOptions
     deliveryOptions.forEach((deliveryOption) =>{
-      const today = dayjs();
-      const deliveryDate = today.add(
-        deliveryOption.deliveryDays,
-        'days'
-      );
-      const dateString = deliveryDate.format(
-        'dddd, MMMM D'
-      );
+      
+      const dateString = calculateDeliveryDate(deliveryOption);
 
       const priceString = deliveryOption.priceCents === 0
       ? 'FREE'
@@ -139,18 +126,21 @@ export function renderOrderSummary() {
         removeFromCart(productId);
   //      console.log(cart);
 
-        const container = document.querySelector(`.js-cart-item-container-${productId}`);
-  //    console.log(container);  
-        // step 2: Use .remove() method to remove the element form cart
-        container.remove();
+        renderOrderSummary(); // Instead of using DOM in all the below lines we used MVC by just regenerating HTML.
+        
+  //       const container = document.querySelector(`.js-cart-item-container-${productId}`);
+  // //    console.log(container);  
+  //       // step 2: Use .remove() method to remove the element form cart
+  //       container.remove();
 
-        updateCartQuantity();
+  //       updateCartQuantity();
 
         renderPaymentSummary();
       });
     });
 
     // console.log(cartSummaryHTML);
+    // Checkout at the top of checkout page.
     function updateCartQuantity() 
     {
       const cartQuantity = calculateCartQuantity();
