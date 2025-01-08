@@ -4,13 +4,14 @@ import {formatCurrency} from '../utils/money.js'; // removed {} because we used 
 import {hello} from 'https://unpkg.com/supersimpledev@1.0.1/hello.esm.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
 import {deliveryOptions, getDeliveryOption} from '../../data/deliveryOptions.js';
+import { renderPaymentSummary } from './paymentSummary.js';
 
-hello();
+// hello();
 
-const today = dayjs();
-const deliveryDate = today.add(7, 'days');
-// console.log(deliveryDate);
-console.log(deliveryDate.format('dddd, MMMM D'));
+// const today = dayjs();
+// const deliveryDate = today.add(7, 'days');
+// // console.log(deliveryDate);
+// console.log(deliveryDate.format('dddd, MMMM D'));
 
 export function renderOrderSummary() {
 
@@ -144,6 +145,8 @@ export function renderOrderSummary() {
         container.remove();
 
         updateCartQuantity();
+
+        renderPaymentSummary();
       });
     });
 
@@ -205,6 +208,8 @@ export function renderOrderSummary() {
         quantityLabel.innerHTML = newQuantity;
 
         updateCartQuantity();
+
+        renderPaymentSummary();
       });
     });
 
@@ -215,6 +220,7 @@ export function renderOrderSummary() {
 
       // Inside renderOrderSummary() function we can call renderOrderSummary() again (RECURSION)
       renderOrderSummary(); // re run the code to update the page (instead of using DOM we just 1)Updated the data and then 2)Regenerate all the HTML) 
+      renderPaymentSummary(); // to regenerate all the HTML
     });
   });
 }
