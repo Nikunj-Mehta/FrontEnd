@@ -1,51 +1,67 @@
-export let cart = JSON.parse(localStorage.getItem('cart'));
+export let cart;
 
-if (!cart) {
-  cart = [
-    {
-      productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
-      quantity: 2,
-      deliveryOptionId: '1'
-    }, 
-    {
-      productId: '15b6fc6f-327a-4ec4-896f-486349e85a3d',
-      quantity: 1,
-      deliveryOptionId: '2'
-    }
-];
+loadFromStorage();
+
+export function loadFromStorage() {
+  cart = JSON.parse(localStorage.getItem('cart'));
+
+  if (!cart) {
+    cart = [
+      {
+        productId: 'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
+        quantity: 2,
+        deliveryOptionId: '1'
+      }, 
+      {
+        productId: '15b6fc6f-327a-4ec4-896f-486349e85a3d',
+        quantity: 1,
+        deliveryOptionId: '2'
+      }
+    ];
+  }
 }
 
 function saveToStorage() {
   localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-export function addToCart(productId)
-{
+export function addToCart(productId) {
+  // Safely find the quantity selector
   const quantitySelector = document.querySelector(`.js-quantity-selector-${productId}`);
-  const quantity = Number(quantitySelector.value); // To convert it to number as DOM gives a string.
   
+  // If quantitySelector is found, use the selected quantity, otherwise default to 1
+  const quantity = quantitySelector ? Number(quantitySelector.value) : 1;
+
+  // If quantity is less than or equal to 0, you can log an error or set it to 1
+  if (quantity <= 0) {
+    console.error(`Quantity must be greater than 0. Received: ${quantity}`);
+    return;
+  }
+
   let matchingItem;
 
-  cart.forEach((cartItem) => 
-  {
-    if (productId === cartItem.productId) 
-    {
+  // Find the matching cart item
+  cart.forEach((cartItem) => {
+    if (productId === cartItem.productId) {
       matchingItem = cartItem;
     }
   });
 
-  if (matchingItem) { // if matching item is defined then it will be true and this code will run
-    matchingItem.quantity += quantity;
+  // Update cart
+  if (matchingItem) {
+    matchingItem.quantity += quantity; // Add to existing quantity
   } else {
     cart.push({
       productId,
       quantity,
-      deliveryOptionId: '1' //Default delivery option
+      deliveryOptionId: '1', // Default delivery option
     });
   }
 
-  saveToStorage();
+  console.log('Cart updated:', cart); // Debugging log
+  saveToStorage(); // Assuming saveToStorage is a function that persists the cart
 }
+
 
 export function removeFromCart(productId) 
 {
