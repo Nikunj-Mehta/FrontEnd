@@ -33,3 +33,11 @@ if(formatCurrency(2000.4) === '20.00') {
 } else {
   console.log('failed');
 }
+
+console.log('Works with negative numbers');
+
+if(formatCurrency(-20167) === '-201.67') { // 16b
+  console.log('passed');
+} else {
+  console.log('failed');
+}
