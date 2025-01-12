@@ -3,15 +3,11 @@ import { renderPaymentSummary } from "./checkout/paymentSummary.js";
 // import '../data/cart-class.js'; // This runs all the code in the file without importing anything.
 // import '../data/car.js';
 // import '../data/backend-practice.js';
-import { loadProducts } from "../data/products.js";
+import { loadProducts, loadProductsFetch } from "../data/products.js";
 import { loadCart } from "../data/cart.js";
 
 Promise.all([
-  new Promise((resolve) => { // It's a built in class and when we create a promise we need to give it some functions.
-    loadProducts(() => { // We run some asynchronous code, wait for it to finish and then
-      resolve('value1'); // we call resolve to go to next step.
-    });
-  }),
+  loadProductsFetch(),
   new Promise((resolve) => { // It's a built in class and when we create a promise we need to give it some functions.
     loadCart(() => { // We run some asynchronous code, wait for it to finish and then
       resolve(); // we call resolve to go to next step.
