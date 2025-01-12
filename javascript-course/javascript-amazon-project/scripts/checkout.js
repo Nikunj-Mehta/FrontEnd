@@ -7,13 +7,23 @@ import { loadProducts, loadProductsFetch } from "../data/products.js";
 import { loadCart } from "../data/cart.js";
 
 async function loadPage() { // async keyword wraps the code into a promise
-  await loadProductsFetch();
+  try {
+ //   throw 'error1';
 
-  await new Promise((resolve) => { // It's a built in class and when we create a promise we need to give it some functions.
-    loadCart(() => { // We run some asynchronous code, wait for it to finish and then
-      resolve(); // we call resolve to go to next step.
+    await loadProductsFetch();
+
+    const value = await new Promise((resolve, reject) => { // It's a built in class and when we create a promise we need to give it some functions.
+//      throw 'error2';
+      loadCart(() => { // We run some asynchronous code, wait for it to finish and then
+//      reject('error3');
+      resolve('value3'); // we call resolve to go to next step.
+      });
     });
-  });
+
+  } catch(error) {
+    console.log('Unexpected error. Please try again later.');
+  }
+  
 
   renderOrderSummary(); 
   renderPaymentSummary();

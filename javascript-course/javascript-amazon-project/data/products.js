@@ -127,6 +127,8 @@ export function loadProductsFetch() {
     }); // we take a product transform it into objects(class) and then save it into new array;
 
     console.log('load products'); // it will attach next steps from here
+  }).catch((error) => { // If we get an error this code will be executed.
+    console.log('Unexpected error. Please try again later.');
   });
   return promise; // We are going to return this whole promise outside this function so that we can all more steps after this promise.
 }
@@ -154,6 +156,10 @@ export function loadProducts(fun) {
     console.log('load products');
 
     fun(); // Callback - a function to run in the future.
+  });
+
+  xhr.addEventListener('error', (error) => {
+    console.log('Unexpected error. Please try again later.');
   });
 
   xhr.open('GET', 'https://supersimplebackend.dev/products');
