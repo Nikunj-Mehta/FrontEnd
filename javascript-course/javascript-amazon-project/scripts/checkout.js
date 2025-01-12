@@ -6,6 +6,21 @@ import { renderPaymentSummary } from "./checkout/paymentSummary.js";
 import { loadProducts, loadProductsFetch } from "../data/products.js";
 import { loadCart } from "../data/cart.js";
 
+async function loadPage() { // async keyword wraps the code into a promise
+  await loadProductsFetch();
+
+  await new Promise((resolve) => { // It's a built in class and when we create a promise we need to give it some functions.
+    loadCart(() => { // We run some asynchronous code, wait for it to finish and then
+      resolve(); // we call resolve to go to next step.
+    });
+  });
+
+  renderOrderSummary(); 
+  renderPaymentSummary();
+}
+loadPage();
+
+/*
 Promise.all([
   loadProductsFetch(),
   new Promise((resolve) => { // It's a built in class and when we create a promise we need to give it some functions.
@@ -19,7 +34,7 @@ Promise.all([
   renderOrderSummary(); // runs this function after loadProducts() and loadCart() is finished.
   renderPaymentSummary(); // Multiple callback cause a lot of nesting.
 });
-
+*/
 /*
 new Promise((resolve) => { // It's a built in class and when we create a promise we need to give it some functions.
   loadProducts(() => { // We run some asynchronous code, wait for it to finish and then
