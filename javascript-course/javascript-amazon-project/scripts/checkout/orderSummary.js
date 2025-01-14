@@ -217,4 +217,28 @@ export function renderOrderSummary() {
       renderPaymentSummary(); // to regenerate all the HTML
     });
   });
+
+  // Helper function to check if the cart is empty
+    const cartContainer = document.querySelector('.js-order-summary');
+    const emptyCartMessageContainer = document.querySelector('.js-empty-cart');
+
+    if (cart.length === 0) {
+      if (emptyCartMessageContainer) {
+        emptyCartMessageContainer.innerHTML = `
+          <p>Your cart is empty.</p>
+          <a href="amazon.html" class="view-products-btn">View Products</a>
+        `;
+      } else {
+        cartContainer.innerHTML = `
+          <div class="js-empty-cart">
+            <p>Your cart is empty.</p>
+            <a href="amazon.html" class="view-products-btn">View Products</a>
+          </div>
+        `;
+      }
+    } else {
+      if (emptyCartMessageContainer) {
+        emptyCartMessageContainer.innerHTML = ''; // Clear the empty message
+      }
+    }
 }

@@ -233,3 +233,25 @@
 .is-editing-quantity .update-quantity-link {
   display: none;
 }
+
+.view-products-btn {
+  display: inline-block;
+  background-color: rgb(255, 216, 20);
+  border: none;
+  color: rgb(33, 33, 33);
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+}
+
+.view-products-btn:hover {
+  background-color: rgb(247, 202, 0);
+}
+
+.empty-cart-text {
+  margin-bottom: 15px; /* Adds space below the text */
+}
