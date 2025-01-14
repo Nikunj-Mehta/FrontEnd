@@ -231,7 +231,7 @@ export function renderOrderSummary() {
       } else {
         cartContainer.innerHTML = `
           <div class="js-empty-cart">
-            <p>Your cart is empty.</p>
+            <p>It looks like your cart is empty.</p>
             <a href="amazon.html" class="view-products-btn">View Products</a>
           </div>
         `;
