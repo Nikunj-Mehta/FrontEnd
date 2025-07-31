@@ -152,15 +152,9 @@
     margin-top: 10px;
     margin-left: 10px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
-.dog-profile
-{
-    width: 1px;
-    height: 1px;
-    margin-left: 0;
-    margin-right: 0;
-}
 
 .profile-pic
 {
@@ -187,4 +181,5 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 10px;
+    margin-bottom: 20px;
 }
