@@ -1,4 +1,4 @@
-@media (max-width: 1200px) {
+ @media (max-width: 1200px) {    /* This applies when the viewport width is 1200px or less. */
   .sidebar {
     position: fixed;
     left: 0;
@@ -34,7 +34,7 @@
   }
 }
 
-@media (min-width: 1200.1px) {
+@media (min-width: 1200.1px) { /* This applies when the viewport width is greater than 1200px. */
   .sidebar {
     position: fixed;
     left: 0;
