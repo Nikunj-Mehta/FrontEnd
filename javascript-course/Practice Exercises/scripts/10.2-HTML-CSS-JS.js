@@ -17,7 +17,7 @@ function toggleButton(selector)
 
 function turnOffPreviousButton()
 {
-  const previousButton = document.querySelector('.on');
+  const previousButton = document.querySelector('.on'); // find the first ele on the page that has the class on.
   if(previousButton)
   {
     previousButton.classList.remove('on');

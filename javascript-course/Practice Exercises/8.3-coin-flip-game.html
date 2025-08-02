@@ -13,9 +13,10 @@
     ">tails</button>
 
     <button onclick="
-      score.wins = 0;
-      score.losses = 0;
-      localStorage.removeItem('score');
+      score.wins = 0;   // need to do this because the score initialization runs only once when the page loads.
+      score.losses = 0; // but if we reset score and don't reload the page then we need to start from here only.
+      console.log(`wins: ${score.wins}, losses: ${score.losses}`);
+      localStorage.removeItem('score'); // need to do this if user doesn't play after reset so for next reload we need to start value from 0, 0.
     ">Reset</button>
 
     <script>

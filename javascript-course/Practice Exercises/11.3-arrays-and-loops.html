@@ -21,7 +21,7 @@
 
         if(nums.length === 0) return {Min: null, max: null};
 
-        if(nums.length === 1) return {min: min, Max: max};
+        if(nums.length === 1) return {min: nums[0], Max: nums[0]};
         for(let i = 0; i < nums.length; i++)
         {
           if(nums[i] > max)

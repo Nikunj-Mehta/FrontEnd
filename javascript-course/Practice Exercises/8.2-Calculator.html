@@ -72,7 +72,9 @@
 
     <p>
       <button class="clear-button" onclick="
-        calculation = '';
+        calculation = ''; // We need to do this because if user doesn't reload the page then value must be this.
+        // localStorage.removeItem('calculation'); // Can use any one from these.
+        localStorage.setItem('calculation', calculation); // need to do this because if user reloads after reset.
         console.log('calculation');
       ">Clear</button>
     </p>

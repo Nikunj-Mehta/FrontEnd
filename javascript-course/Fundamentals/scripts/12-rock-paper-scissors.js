@@ -25,7 +25,7 @@ function autoPlay()
 {
   if(!isAutoPlaying)
   {
-    intervalId = setInterval(() => {
+    intervalId = setInterval(() => { // Set Interval is a JS method which will execute this code after every 1 sec.
       const playerMove = pickComputerMove();
       playGame(playerMove);
     }, 1000);
@@ -33,7 +33,7 @@ function autoPlay()
   }
   else
   {
-    clearInterval(intervalId);
+    clearInterval(intervalId); // used to stop the setInterval function by giving that ID
     isAutoPlaying = false;
   }
 }
@@ -59,6 +59,9 @@ document.querySelector('.js-reset-score-button').addEventListener('click', () =>
 });
 
 document.querySelector('.js-auto-play-button').addEventListener('click', () => {
+  const autoplayButton = document.querySelector('.js-auto-play-button');
+  autoplayButton.innerHTML = autoplayButton.innerHTML === "Auto Play" ? "Stop Play" : "Auto Play";
+  
   autoPlay();
 });
 

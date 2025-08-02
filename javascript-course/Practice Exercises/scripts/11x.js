@@ -55,9 +55,9 @@ function addTodo()
 
   inputElement.value = '';
 
-  renderTodoList();
-
   saveToStorage();
+  
+  renderTodoList();
 }
 
 function saveToStorage()

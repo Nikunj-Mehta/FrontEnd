@@ -53,6 +53,7 @@
       console.log(JSON.stringify(product2)); // JS object converted to JSON using built-in JSON.
       const jsonString = JSON.stringify(product2);
       console.log(JSON.parse(jsonString));
+      console.log(JSON.parse(jsonString)['delivery-time']); // property with na-me with - can't be accessed directly to access them use this syntax.
       
 
       console.log('hello' .length);
@@ -73,8 +74,8 @@
           message: 'Good job!'
         };
 
-      console.log(object3 === object1);
-      console.log(object2 === object1);
+      console.log(object3 === object1); // false === in js does not compare the value it compares the reference.
+      console.log(object2 === object1); // true because object2 refers to exact same object as object1, not a new one.
 
       const object4 = 
         {

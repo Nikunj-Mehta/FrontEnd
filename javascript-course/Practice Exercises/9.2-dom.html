@@ -5,15 +5,16 @@
   </head>
   <body>
     <input placeholder="Name" class="js-input-name" onkeydown="
-      handelKeydown();  
+      handelKeydown(event);  
     ">
-    <button onclick="
-      display();
-    " class="js-submit-button">Submit</button>
+    <button 
+      onclick="display();"
+      class="js-submit-button"
+    >Submit</button>
     <p class="js-display-name"></p>
     <script>
 
-      function handelKeydown()
+      function handelKeydown(event)
       {
         if(event.key === 'Enter') display();
       }
@@ -23,7 +24,7 @@
         const name = document.querySelector('.js-input-name').value;
 
         document.querySelector('.js-display-name')
-          .innerHTML = `Your name is: ${name}`; 
+          .innerHTML = `Hello my dear: ${name}`; 
       }
     </script>
   </body>
